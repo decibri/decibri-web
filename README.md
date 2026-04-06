@@ -1,9 +1,43 @@
+<!-- markdownlint-disable MD033 MD041 -->
+<div align="center">
+
 # decibri-web
 
-**Microphone capture for the browser. Same API as [decibri](https://npmjs.com/package/decibri) for Node.js.**
+Cross-browser microphone capture for the web. Same API as [decibri](https://decibri.dev) for Node.js.
 
-[![npm version](https://img.shields.io/npm/v/decibri-web)](https://npmjs.com/package/decibri-web)
-[![license](https://img.shields.io/npm/l/decibri-web)](LICENSE)
+Zero dependencies. Pure TypeScript. Under 10KB.
+
+<!-- badges: start -->
+<table>
+  <tr>
+    <td><strong>Meta</strong></td>
+    <td>
+      <a href="https://www.npmjs.com/package/decibri-web"><img src="https://img.shields.io/npm/v/decibri-web" alt="npm version"></a>&nbsp;
+      <a href="https://github.com/analyticsinmotion/decibri-web/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="Apache 2.0 License"></a>&nbsp;
+      <a href="https://decibri.dev"><img src="https://img.shields.io/badge/Website-decibri.dev-blue" alt="decibri.dev"></a>&nbsp;
+      <a href="https://github.com/analyticsinmotion"><img src="https://github.com/user-attachments/assets/616c530f-cf2a-4f26-8f6c-7397be513847" alt="Analytics in Motion" width="137" height="20"></a>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>CI</strong></td>
+    <td>
+      <a href="https://github.com/analyticsinmotion/decibri-web/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/analyticsinmotion/decibri-web/ci.yml?label=build%20%26%20test&logo=github" alt="CI"></a>&nbsp;
+      <a href="https://www.npmjs.com/package/decibri-web"><img src="https://img.shields.io/bundlephobia/minzip/decibri-web" alt="Bundle size"></a>&nbsp;
+      <a href="https://www.npmjs.com/package/decibri-web"><img src="https://img.shields.io/badge/dependencies-0-brightgreen" alt="Zero dependencies"></a>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Platform</strong></td>
+    <td>
+      <a href="https://npmjs.com/package/decibri"><img src="https://img.shields.io/badge/Node.js-decibri-339933?logo=node.js&logoColor=white" alt="decibri (Node.js)"></a>&nbsp;
+      <a href="https://npmjs.com/package/decibri-web"><img src="https://img.shields.io/badge/Browser-decibri--web-4285F4?logo=googlechrome&logoColor=white" alt="decibri-web (Browser)"></a>
+    </td>
+  </tr>
+</table>
+<!-- badges: end -->
+</div>
+
+---
 
 ## The decibri platform
 
@@ -172,4 +206,4 @@ Copy `node_modules/decibri-web/dist/worklet.js` to your static assets directory 
 
 ## License
 
-[Apache-2.0](LICENSE) — Analytics in Motion
+[Apache-2.0](LICENSE) — [Analytics in Motion](https://github.com/analyticsinmotion)
