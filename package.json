@@ -2,20 +2,36 @@
   "name": "decibri-web",
   "version": "0.1.0",
   "description": "Cross-browser microphone capture for the web. Same API as decibri for Node.js.",
-  "main": "dist/decibri-web.umd.js",
-  "module": "dist/decibri-web.esm.js",
-  "types": "dist/decibri-web.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/decibri-web.esm.js",
-      "require": "./dist/decibri-web.umd.js",
-      "types": "./dist/decibri-web.d.ts"
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
     },
-    "./worklet": "./dist/worklet.js"
+    "./worklet": "./dist/worklet.js",
+    "./global": "./dist/index.global.js"
   },
   "files": [
     "dist/"
   ],
+  "scripts": {
+    "build:worklet": "tsup src/worklet-processor.ts --format esm --out-dir dist --no-dts --minify && node -e \"require('fs').renameSync('dist/worklet-processor.mjs','dist/worklet.js')\"",
+    "build:inline": "node scripts/build-worklet-inline.mjs",
+    "build:main": "tsup --config tsup.config.ts",
+    "build": "npm run build:worklet && npm run build:inline && npm run build:main",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
   "keywords": [
     "microphone",
     "audio",
@@ -36,5 +52,11 @@
     "type": "git",
     "url": "https://github.com/analyticsinmotion/decibri-web"
   },
-  "homepage": "https://decibri.dev"
+  "homepage": "https://decibri.dev",
+  "sideEffects": false,
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  }
 }

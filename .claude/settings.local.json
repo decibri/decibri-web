@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /c/development/aim/npm/decibri-web/repository/decibri-web log --oneline --all)",
+      "Bash(git -C /c/development/aim/npm/decibri-web/repository/decibri-web status)",
+      "Bash(git -C /c/development/aim/npm/decibri-web/repository/decibri-web show --stat 55fcaeb)",
+      "Bash(git -C /c/development/aim/npm/decibri-web/repository/decibri-web show 55fcaeb --no-patch --format=\"%B\")",
+      "Bash(find /c/development/aim/npm/decibri-web/repository/decibri-web -maxdepth 2 -type f ! -path \"*/.git/*\" ! -path \"*/.claude/*\" -exec ls -lh {} \\\\;)",
+      "Bash(grep -v \"^\\\\.$\")",
+      "Bash(git -C /c/development/aim/npm/decibri-web/repository/decibri-web log --oneline -10)",
+      "Bash(npm install:*)",
+      "Bash(npx vitest:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npm run:*)"
+    ]
+  }
+}
