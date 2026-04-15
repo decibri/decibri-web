@@ -46,13 +46,13 @@
     "stt",
     "speech-to-text"
   ],
-  "author": "Analytics in Motion",
+  "author": "Decibri",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/analyticsinmotion/decibri-web"
+    "url": "https://github.com/decibri/decibri-web"
   },
-  "homepage": "https://decibri.dev",
+  "homepage": "https://decibri.com",
   "sideEffects": false,
   "devDependencies": {
     "tsup": "^8.0.0",

@@ -13,7 +13,7 @@ Zero dependencies.
     <td><strong>Meta</strong></td>
     <td>
       <a href="https://www.npmjs.com/package/decibri-web"><img src="https://img.shields.io/npm/v/decibri-web" alt="npm version"></a>&nbsp;
-      <a href="https://github.com/analyticsinmotion/decibri-web/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="Apache 2.0 License"></a>&nbsp;
+      <a href="https://github.com/decibri/decibri-web/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="Apache 2.0 License"></a>&nbsp;
       <a href="https://decibri.com"><img src="https://img.shields.io/badge/Website-decibri.com-blue" alt="decibri.com"></a>&nbsp;
     </td>
   </tr>
@@ -67,7 +67,7 @@ mic.stop();
 
 ### `new Decibri(options?)`
 
-Creates a new microphone capture instance. Does **not** start capture — call `start()`.
+Creates a new microphone capture instance. Does **not** start capture; call `start()` to begin.
 
 | Option | Type | Default | Description |
 | -------- | ------ | --------- | ------------- |
@@ -104,10 +104,10 @@ Creates a new microphone capture instance. Does **not** start capture — call `
 | ------- | --------- | ------------- |
 | `data` | `Int16Array` or `Float32Array` | Audio chunk (format depends on `format` option) |
 | `error` | `Error` | Permission denied, worklet load failure, etc. |
-| `end` | — | Emitted after `stop()` |
-| `close` | — | Emitted after `stop()`, after `end` |
-| `speech` | — | VAD: RMS energy crossed threshold (requires `vad: true`) |
-| `silence` | — | VAD: sub-threshold audio for `vadHoldoff` ms (requires `vad: true`) |
+| `end` | | Emitted after `stop()` |
+| `close` | | Emitted after `stop()`, after `end` |
+| `speech` | | VAD: RMS energy crossed threshold (requires `vad: true`) |
+| `silence` | | VAD: sub-threshold audio for `vadHoldoff` ms (requires `vad: true`) |
 
 ## Browser Support
 
@@ -198,4 +198,4 @@ Copy `node_modules/decibri-web/dist/worklet.js` to your static assets directory 
 
 ## License
 
-[Apache-2.0](LICENSE) — [Analytics in Motion](https://github.com/analyticsinmotion)
+[Apache-2.0](LICENSE) - [Decibri](https://github.com/decibri)
