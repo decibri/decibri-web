@@ -122,20 +122,6 @@ Creates a new microphone capture instance. Does **not** start capture; call `sta
 
 Requires HTTPS (or localhost) for microphone access.
 
-## Differences from decibri (Node.js)
-
-| Feature | Node.js `decibri` | `decibri-web` |
-| --------- | ------------------ | --------------- |
-| Constructor | Sync, capture starts on read | Sync, requires `await start()` |
-| `data` payload | `Buffer` | `Int16Array` / `Float32Array` |
-| `devices()` | Sync | **Async** (returns Promise) |
-| `device` option | Number index or name substring | String `deviceId` only |
-| `version()` | `{ decibri, portaudio }` | `{ decibriWeb }` |
-| `echoCancellation` | N/A | `boolean` (default `true`) |
-| `noiseSuppression` | N/A | `boolean` (default `true`) |
-| `backpressure` event | Available | Not available |
-| `pipe()` / streams | Full Readable stream | Not available |
-
 ## WebSocket Streaming Example
 
 ```typescript
